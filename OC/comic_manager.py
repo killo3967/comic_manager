@@ -19,7 +19,7 @@ import wx.grid
 class frameMain ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"COMIC MANAGER", pos = wx.DefaultPosition, size = wx.Size( 1024,768 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"COMIC MANAGER", pos = wx.DefaultPosition, size = wx.Size( 1112,768 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
 		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 		self.DragAcceptFiles( True )
@@ -42,7 +42,7 @@ class frameMain ( wx.Frame ):
 		self.menu_Main_File.AppendSeparator()
 
 		self.menu_main_file_exit = wx.MenuItem( self.menu_Main_File, wx.ID_ANY, u"Exit"+ u"\t" + u"CTRL+X", wx.EmptyString, wx.ITEM_NORMAL )
-		self.menu_main_file_exit.SetBitmap( wx.Bitmap( u"exit-white.png", wx.BITMAP_TYPE_ANY ) )
+		self.menu_main_file_exit.SetBitmap( wx.Bitmap( u"icons/exit_16.png", wx.BITMAP_TYPE_ANY ) )
 		self.menu_Main_File.Append( self.menu_main_file_exit )
 
 		self.menubar_Main.Append( self.menu_Main_File, u"File" )
@@ -138,9 +138,9 @@ class frameMain ( wx.Frame ):
 		self.auiToolBar_Main.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 		self.auiToolBar_Main.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 
-		self.tool_open_folder = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/open_folder.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_open_folder = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Open Folder", wx.Bitmap( u"icons/open_folder_15.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool2 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.m_tool2 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/exit_15.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
 		self.m_tool3 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
@@ -150,23 +150,23 @@ class frameMain ( wx.Frame ):
 
 		self.auiToolBar_Main.AddSeparator()
 
-		self.m_tool6 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_tree = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Tree Folder", wx.Bitmap( u"icons/tree_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool7 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_viewer = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/viewer_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool8 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_library = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Library", wx.Bitmap( u"icons/library_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool9 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_shelf = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Shelfs", wx.Bitmap( u"icons/shelf_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool10 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_page = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Pages", wx.Bitmap( u"icons/pages_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool11 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_comic_viewer = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Comic Viewer", wx.Bitmap( u"icons/comic-viewer_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+
+		self.tool_metadata = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Metadata", wx.Bitmap( u"icons/metadata_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+
+		self.tool_configuration = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Configuration", wx.Bitmap( u"icons/configuration.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
 		self.auiToolBar_Main.AddSeparator()
-
-		self.m_tool12 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
-
-		self.m_tool13 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
 		self.m_tool14 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
@@ -176,15 +176,17 @@ class frameMain ( wx.Frame ):
 
 		self.m_tool17 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool18 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.m_tool18 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/open_folder_15.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
 		self.auiToolBar_Main.AddSeparator()
 
-		self.m_tool19 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/exit.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.m_tool181 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/exit_16.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+
+		self.auiToolBar_Main.AddSeparator()
 
 		self.auiToolBar_Main.Realize()
 
-		bSizer14.Add( self.auiToolBar_Main, 0, wx.ALL, 5 )
+		bSizer14.Add( self.auiToolBar_Main, 1, wx.ALL, 5 )
 
 
 		bSizer15.Add( bSizer14, 0, wx.EXPAND, 0 )

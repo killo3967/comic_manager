@@ -48,7 +48,7 @@
       <property name="minimum_size"></property>
       <property name="name">frameMain</property>
       <property name="pos"></property>
-      <property name="size">1024,768</property>
+      <property name="size">1112,768</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">COMIC MANAGER</property>
@@ -145,7 +145,7 @@
             <property name="permission">none</property>
           </object>
           <object class="wxMenuItem" expanded="false">
-            <property name="bitmap">Load From File; ../OC/exit-white.png</property>
+            <property name="bitmap">Load From File; ../OC/icons/exit_16.png</property>
             <property name="checked">0</property>
             <property name="enabled">1</property>
             <property name="help"></property>
@@ -469,7 +469,7 @@
                 <object class="sizeritem" expanded="true">
                   <property name="border">5</property>
                   <property name="flag">wxALL</property>
-                  <property name="proportion">0</property>
+                  <property name="proportion">1</property>
                   <object class="wxAuiToolBar" expanded="true">
                     <property name="BottomDockable">1</property>
                     <property name="LeftDockable">1</property>
@@ -485,7 +485,7 @@
                     <property name="caption"></property>
                     <property name="caption_visible">0</property>
                     <property name="center_pane">1</property>
-                    <property name="close_button">0</property>
+                    <property name="close_button">1</property>
                     <property name="context_help"></property>
                     <property name="context_menu">0</property>
                     <property name="default_pane">1</property>
@@ -504,7 +504,7 @@
                     <property name="margins">0,0</property>
                     <property name="max_size"></property>
                     <property name="maximize_button">0</property>
-                    <property name="maximum_size"></property>
+                    <property name="maximum_size">-1,-1</property>
                     <property name="min_size"></property>
                     <property name="minimize_button">0</property>
                     <property name="minimum_size">-1,-1</property>
@@ -523,7 +523,7 @@
                     <property name="size">-1,-1</property>
                     <property name="style">wxAUI_TB_HORZ_LAYOUT</property>
                     <property name="subclass">; ; forward_declare</property>
-                    <property name="toolbar_label">label</property>
+                    <property name="toolbar_label">Main Toolbar</property>
                     <property name="toolbar_pane">1</property>
                     <property name="tooltip"></property>
                     <property name="use_explicit_ids">0</property>
@@ -531,18 +531,18 @@
                     <property name="window_name"></property>
                     <property name="window_style"></property>
                     <object class="tool" expanded="true">
-                      <property name="bitmap">Load From File; ../OC/icons/open_folder.png</property>
+                      <property name="bitmap">Load From File; ../OC/icons/open_folder_15.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
+                      <property name="label">Open Folder</property>
                       <property name="name">tool_open_folder</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/exit_15.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
@@ -589,95 +589,95 @@
                       <property name="permission">protected</property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/tree_16.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
-                      <property name="name">m_tool6</property>
+                      <property name="label">Tree Folder</property>
+                      <property name="name">tool_tree</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/viewer_16.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
                       <property name="label">tool</property>
-                      <property name="name">m_tool7</property>
+                      <property name="name">tool_viewer</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/library_16.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
-                      <property name="name">m_tool8</property>
+                      <property name="label">Library</property>
+                      <property name="name">tool_library</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/shelf_16.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
-                      <property name="name">m_tool9</property>
+                      <property name="label">Shelfs</property>
+                      <property name="name">tool_shelf</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/pages_16.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
-                      <property name="name">m_tool10</property>
+                      <property name="label">Pages</property>
+                      <property name="name">tool_page</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/comic-viewer_16.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
-                      <property name="name">m_tool11</property>
+                      <property name="label">Comic Viewer</property>
+                      <property name="name">tool_comic_viewer</property>
+                      <property name="permission">protected</property>
+                      <property name="statusbar"></property>
+                      <property name="tooltip"></property>
+                    </object>
+                    <object class="tool" expanded="true">
+                      <property name="bitmap">Load From File; ../OC/icons/metadata_16.png</property>
+                      <property name="context_menu">0</property>
+                      <property name="id">wxID_ANY</property>
+                      <property name="kind">wxITEM_NORMAL</property>
+                      <property name="label">Metadata</property>
+                      <property name="name">tool_metadata</property>
+                      <property name="permission">protected</property>
+                      <property name="statusbar"></property>
+                      <property name="tooltip"></property>
+                    </object>
+                    <object class="tool" expanded="true">
+                      <property name="bitmap">Load From File; ../OC/icons/configuration.png</property>
+                      <property name="context_menu">0</property>
+                      <property name="id">wxID_ANY</property>
+                      <property name="kind">wxITEM_NORMAL</property>
+                      <property name="label">Configuration</property>
+                      <property name="name">tool_configuration</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
                     </object>
                     <object class="toolSeparator" expanded="true">
                       <property name="permission">protected</property>
-                    </object>
-                    <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
-                      <property name="context_menu">0</property>
-                      <property name="id">wxID_ANY</property>
-                      <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
-                      <property name="name">m_tool12</property>
-                      <property name="permission">protected</property>
-                      <property name="statusbar"></property>
-                      <property name="tooltip"></property>
-                    </object>
-                    <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
-                      <property name="context_menu">0</property>
-                      <property name="id">wxID_ANY</property>
-                      <property name="kind">wxITEM_NORMAL</property>
-                      <property name="label">tool</property>
-                      <property name="name">m_tool13</property>
-                      <property name="permission">protected</property>
-                      <property name="statusbar"></property>
-                      <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
                       <property name="bitmap"></property>
@@ -724,7 +724,7 @@
                       <property name="tooltip"></property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap"></property>
+                      <property name="bitmap">Load From File; ../OC/icons/open_folder_15.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
@@ -738,15 +738,18 @@
                       <property name="permission">protected</property>
                     </object>
                     <object class="tool" expanded="true">
-                      <property name="bitmap">Load From File; ../OC/icons/exit.png</property>
+                      <property name="bitmap">Load From File; ../OC/icons/exit_16.png</property>
                       <property name="context_menu">0</property>
                       <property name="id">wxID_ANY</property>
                       <property name="kind">wxITEM_NORMAL</property>
                       <property name="label">tool</property>
-                      <property name="name">m_tool19</property>
+                      <property name="name">m_tool181</property>
                       <property name="permission">protected</property>
                       <property name="statusbar"></property>
                       <property name="tooltip"></property>
+                    </object>
+                    <object class="toolSeparator" expanded="true">
+                      <property name="permission">protected</property>
                     </object>
                   </object>
                 </object>
@@ -823,7 +826,7 @@
                     <object class="auinotebookpage" expanded="true">
                       <property name="bitmap"></property>
                       <property name="label">Directories</property>
-                      <property name="select">1</property>
+                      <property name="select">0</property>
                       <object class="wxPanel" expanded="true">
                         <property name="BottomDockable">1</property>
                         <property name="LeftDockable">1</property>
@@ -1457,7 +1460,7 @@
                     <object class="auinotebookpage" expanded="true">
                       <property name="bitmap"></property>
                       <property name="label">Log</property>
-                      <property name="select">0</property>
+                      <property name="select">1</property>
                       <object class="wxPanel" expanded="true">
                         <property name="BottomDockable">1</property>
                         <property name="LeftDockable">1</property>

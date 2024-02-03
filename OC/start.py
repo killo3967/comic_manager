@@ -1,3 +1,6 @@
+'''
+<a href="https://www.flaticon.es/iconos-gratis/sav" title="sav iconos">Sav iconos creados por IconMarketPK - Flaticon</a>
+'''
 import wx
 from comic_manager import *
 
