@@ -19,10 +19,10 @@ import wx.grid
 class frameMain ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"COMIC MANAGER", pos = wx.DefaultPosition, size = wx.Size( 1112,768 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"COMIC MANAGER", pos = wx.DefaultPosition, size = wx.Size( 750,650 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
 		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
-		self.DragAcceptFiles( True )
+		self.DragAcceptFiles( true )
 
 		self.menubar_Main = wx.MenuBar( 0 )
 		self.menu_Main_File = wx.Menu()
@@ -127,20 +127,22 @@ class frameMain ( wx.Frame ):
 
 		self.SetMenuBar( self.menubar_Main )
 
-		bSizer_FrameMain = wx.BoxSizer( wx.HORIZONTAL )
+		sizer_main = wx.BoxSizer( wx.HORIZONTAL )
 
-		bSizer15 = wx.BoxSizer( wx.VERTICAL )
+		sizer_main2 = wx.BoxSizer( wx.VERTICAL )
 
-		bSizer14 = wx.BoxSizer( wx.VERTICAL )
+		sizer_toolbar = wx.BoxSizer( wx.VERTICAL )
 
 		self.auiToolBar_Main = wx.aui.AuiToolBar( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), wx.aui.AUI_TB_HORZ_LAYOUT )
+		self.auiToolBar_Main.SetToolSeparation( 2 )
 		self.auiToolBar_Main.SetMargins( wx.Size( 0,0 ) )
+		self.auiToolBar_Main.SetToolPacking( 0 )
 		self.auiToolBar_Main.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 		self.auiToolBar_Main.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 
-		self.tool_open_folder = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Open Folder", wx.Bitmap( u"icons/open_folder_15.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.tool_open_folder = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"Open Folder", wx.Bitmap( u"icons/open_folder_15.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, u"Open directory", wx.EmptyString, None )
 
-		self.m_tool2 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/exit_15.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.m_tool2 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
 		self.m_tool3 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
@@ -176,7 +178,7 @@ class frameMain ( wx.Frame ):
 
 		self.m_tool17 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
-		self.m_tool18 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.Bitmap( u"icons/open_folder_15.png", wx.BITMAP_TYPE_ANY ), wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
+		self.m_tool18 = self.auiToolBar_Main.AddTool( wx.ID_ANY, u"tool", wx.NullBitmap, wx.NullBitmap, wx.ITEM_NORMAL, wx.EmptyString, wx.EmptyString, None )
 
 		self.auiToolBar_Main.AddSeparator()
 
@@ -186,12 +188,12 @@ class frameMain ( wx.Frame ):
 
 		self.auiToolBar_Main.Realize()
 
-		bSizer14.Add( self.auiToolBar_Main, 1, wx.ALL, 5 )
+		sizer_toolbar.Add( self.auiToolBar_Main, 1, wx.ALL, 1 )
 
 
-		bSizer15.Add( bSizer14, 0, wx.EXPAND, 0 )
+		sizer_main2.Add( sizer_toolbar, 0, wx.EXPAND, 1 )
 
-		bSizer161 = wx.BoxSizer( wx.VERTICAL )
+		sizer_notebook = wx.BoxSizer( wx.VERTICAL )
 
 		self.auinotebook_main = wx.aui.AuiNotebook( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.aui.AUI_NB_DEFAULT_STYLE )
 		self.auinotebook_main_panel_directories = wx.Panel( self.auinotebook_main, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
@@ -301,42 +303,34 @@ class frameMain ( wx.Frame ):
 		bSizer81.Fit( self.auinotebook_main_panel_Log )
 		self.auinotebook_main.AddPage( self.auinotebook_main_panel_Log, u"Log", False, wx.NullBitmap )
 
-		bSizer161.Add( self.auinotebook_main, 1, wx.EXPAND |wx.ALL, 5 )
+		sizer_notebook.Add( self.auinotebook_main, 1, wx.EXPAND |wx.ALL, 1 )
 
 
-		bSizer15.Add( bSizer161, 1, wx.EXPAND, 0 )
+		sizer_main2.Add( sizer_notebook, 1, wx.EXPAND, 0 )
 
 
-		bSizer_FrameMain.Add( bSizer15, 1, wx.EXPAND, 5 )
+		sizer_main.Add( sizer_main2, 1, wx.EXPAND, 1 )
 
 
-		self.SetSizer( bSizer_FrameMain )
+		self.SetSizer( sizer_main )
 		self.Layout()
 		self.m_statusBar1 = self.CreateStatusBar( 1, wx.STB_SIZEGRIP, wx.ID_ANY )
 
 		self.Centre( wx.BOTH )
 
 		# Connect Events
-		self.Bind( wx.EVT_MENU, self.menuItemFile_NewOnMenuSelection, id = self.menu_main_file_newfile.GetId() )
-		self.Bind( wx.EVT_MENU, self.menuItemFile_File_OpenOnMenuSelection, id = self.menu_main_file_openfile.GetId() )
-		self.Bind( wx.EVT_MENU, self.menuItemFile_SaveOnMenuSelection, id = self.menu_main_file_save.GetId() )
-		self.Bind( wx.EVT_MENU, self.menuItemFile_Save_asOnMenuSelection, id = self.menu_main_file_saveas.GetId() )
+		self.Bind( wx.EVT_MENU, self.abrir_archivo, id = self.menu_main_file_newfile.GetId() )
+		self.Bind( wx.EVT_MENU, self.MM.main_menu_exit, id = self.menu_main_file_exit.GetId() )
 
 	def __del__( self ):
 		pass
 
 
 	# Virtual event handlers, override them in your derived class
-	def menuItemFile_NewOnMenuSelection( self, event ):
+	def abrir_archivo( self, event ):
 		pass
 
-	def menuItemFile_File_OpenOnMenuSelection( self, event ):
-		pass
-
-	def menuItemFile_SaveOnMenuSelection( self, event ):
-		pass
-
-	def menuItemFile_Save_asOnMenuSelection( self, event ):
+	def MM.main_menu_exit( self, event ):
 		pass
 
 
